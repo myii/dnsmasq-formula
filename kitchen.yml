@@ -341,8 +341,8 @@ suites:
           '*':
             - dnsmasq._mapdata
             - dnsmasq
-          'G@init:systemd and ( G@os:Arch )':
-            - states.custom_systemd_service
+          'G@init:systemd and ( G@os:Arch or G@os:Fedora or G@os:Ubuntu )':
+            - states.disable-service-systemd-resolved
       pillars:
         top.sls:
           base:
